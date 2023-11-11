@@ -1,0 +1,59 @@
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  exclude:
+    - 'example/**'
+    - 'build/**'
+    - '**/*.g.dart'
+    - '**/*.freezed.dart'
+
+linter:
+  rules:
+
+dart_code_metrics:
+  extends:
+    - package:dart_code_metrics_presets/all.yaml
+    - package:dart_code_metrics_presets/bloc.yaml
+    - package:dart_code_metrics_presets/provider.yaml
+    - package:dart_code_metrics_presets/get_it.yaml
+    - package:dart_code_metrics_presets/intl.yaml
+    - package:dart_code_metrics_presets/pub.yaml
+  assists:
+  formatter:
+    line-length: 120
+  rules:
+    - avoid-cubits: false
+    - avoid-ignoring-return-values: false
+    - avoid-late-keyword:
+        allow-initialized: true
+    - avoid-non-ascii-symbols: false
+    - avoid-shadowing:
+        ignored-names:
+          - context
+          - event
+    - avoid-similar-names: false
+    - arguments-ordering: false
+    - format-comment:
+        only-doc-comments: true
+    - member-ordering:
+        alphabetize: false
+        order:
+          - fields
+          - constructors
+        widgets-order:
+          - fields
+          - constructors
+    - newline-before-case: false
+    - no-equal-arguments: false
+    - no-magic-number: false
+    - parameters-ordering: false
+    - prefer-addition-subtraction-assignments: false
+    - prefer-correct-handler-name:
+        name-pattern: (^handle[A-Z]+|^unawaited|Listener$)
+    - prefer-correct-switch-length:
+        min-length: 2
+    - prefer-match-file-name: false
+    - prefer-moving-to-variable:
+        allowed-duplicated-chains: 5
+    - prefer-widget-private-members:
+        ignore-static: true
