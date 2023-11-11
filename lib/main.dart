@@ -17,9 +17,9 @@ class Main {
 
   static Future<void> _initWindow() async {
     if (Platform.isWindows) {
-      await windowManager.setFullScreen(true);
-      await windowManager.setBounds((await windowManager.getBounds()).inflate(1));
-      await windowManager.setBounds((await windowManager.getBounds()).inflate(-1));
+      // await windowManager.setFullScreen(true);
+      // await windowManager.setBounds((await windowManager.getBounds()).inflate(1));
+      // await windowManager.setBounds((await windowManager.getBounds()).inflate(-1));
     }
     // windowManager.setClosable(false);
     await windowManager.show();
